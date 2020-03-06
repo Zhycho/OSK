@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "MSC";
+    src: url("../fonts/MuseoSansCyrl__thin.otf") format("opentype");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "MSC";
+    src: url("../fonts/MuseoSansCyrl__medium.otf") format("opentype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "MSC";
+    src: url("../fonts/MuseoSansCyrl__bold.otf") format("opentype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "MSC";
+    src: url("../fonts/MuseoSansCyrl__heavy.otf") format("opentype");
+    font-weight: 900;
+}
+
+@black: #191919;
+@white: #FFF;
+@blue: #007bad;
+
+.trans(@time: 0.25s) {
+    transition: all @time ease-in-out;
+    -webkit-transition: all @time ease-in-out;
+    -moz-transition: all @time ease-in-out;
+    -o-transition: all @time ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #FFF;
+    font-family: 'MSC', sans-serif;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'MSC', sans-serif;
+}
+
+button:focus {
+    outline: none;
+}
+
+a {
+    color: #232323;
+    font-family: 'MSC', sans-serif;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+input {
+    font-family: 'MSC', sans-serif;
+}
+
+input:focus {
+    outline: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1470px;
+    padding: 0 15px;
+}
+
+*::selection {
+    background-color: @blue;
+    color: #FFF;
+}
