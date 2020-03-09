@@ -27,7 +27,7 @@ const path = {
         js: 'src/js/script.js',
         style: 'src/style/main.less',
         styleAll: 'src/**/*.less',
-        img: 'src/img/**/*.*',
+        img: ['src/img/**/*.jpg', 'src/img/**/*.png'],
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
