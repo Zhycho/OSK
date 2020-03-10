@@ -1,0 +1,99 @@
+.block-why-are-we {
+    background-image: url(../img/why-are-we-back.png);
+
+    .main-headline {
+        margin-bottom: 28px;
+    }
+}
+
+.why-are-we-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "waw-1 waw-3 waw-5"
+    "waw-2 waw-4 waw-6";
+}
+
+.why-are-we-list__item {
+    position: relative;
+    width: 50%;
+
+    &:nth-of-type(1) {
+        grid-area: waw-1;
+    }
+    &:nth-of-type(2) {
+        grid-area: waw-2;
+        justify-self: end;
+    }
+    &:nth-of-type(3) {
+        grid-area: waw-3;
+    }
+    &:nth-of-type(4) {
+        grid-area: waw-4;
+        justify-self: end;
+    }
+    &:nth-of-type(5) {
+        grid-area: waw-5;
+    }
+    &:nth-of-type(6) {
+        grid-area: waw-6;
+        justify-self: end;
+    }
+
+    a {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &:hover {
+
+        .why-are-we-list__item-text {
+            color: #14a7e3;
+        }
+
+        .why-are-we-list__item-icon-wrapper {
+            fill: #FFF;
+        }
+
+        .why-are-we-list__item-icon {
+            filter: none;
+            opacity: 1;
+        }
+    }
+}
+
+.why-are-we-list__item-icon-wrapper {
+    fill: #0a94cc;
+    height: 88px;
+    margin-bottom: 16px;
+    position: relative;
+    transition: all .2s ease-in-out;
+    width: 88px;
+
+    svg {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.why-are-we-list__item-icon {
+    background-image: url(../img/heptagon-mid.png);
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+    height: 88px;
+    opacity: 0.2;
+    transition: all .2s ease-in-out;
+    width: 88px;
+}
+
+.why-are-we-list__item-text {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all .2s ease-in-out;
+}

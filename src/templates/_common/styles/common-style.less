@@ -102,12 +102,37 @@ input:focus {
 
 .main-headline {
     color: #3f4144;
+    display: inline-block;
     font-weight: 700;
     font-size: 55px;
+    position: relative;
 
     span {
-
+        align-items: center;
+        background-image: url(../img/heptagon-small.png);
+        background-repeat: no-repeat;
+        bottom: 50px;
+        color: #FFF;
+        display: flex;
+        font-size: 16px;
+        font-weight: 900;
+        height: 46px;
+        justify-content: center;
+        left: 100%;
+        position: absolute;
+        width: 46px;
     }
+
+    &.main-headline_white {
+        color: #FFF;
+    }
+}
+
+.headline-small {
+    color: #484f5b;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
 }
 
 .product-board-link-list {

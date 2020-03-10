@@ -1,0 +1,124 @@
+.block-products {
+
+    .main-headline {
+        margin-bottom: 60px;
+    }
+}
+
+.block-products-list {
+
+}
+
+.block-products-list__item {
+    display: flex;
+
+    &:nth-of-type(even) {
+
+        .block-products-list__item-board {
+            order: 1;
+        }
+    }
+}
+
+.block-products-list__item-board {
+    position: relative;
+    width: 50%;
+
+    a {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &::before {
+        background-color: rgba(0, 123, 173, 0.0);
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &:hover {
+
+        .block-products-list__item-headline {
+            text-decoration: underline;
+        }
+
+        .block-products-list__item-icon {
+            filter: grayscale(1);
+        }
+
+        &::before {
+            background-color: rgba(0, 123, 173, 0.5);
+            transition: all .2s ease-in-out;
+        }
+    }
+}
+
+.block-products-list__item-content {
+    left: 70px;
+    position: absolute;
+    top: calc(50% - 10px);
+    transform: translateY(-50%);
+}
+
+.block-products-list__item-icon {
+    align-items: center;
+    background-image: url(../img/heptagon-small.png);
+    background-repeat: no-repeat;
+    display: flex;
+    fill: #FFF;
+    height: 47px;
+    justify-content: center;
+    margin-bottom: 12px;
+    transition: all .2s ease-in-out;
+    width: 46px;
+
+    &.block-products-list__item-icon_01 {
+
+        svg {
+            margin-top: 4px;
+            width: 24px;
+        }
+    }
+
+    &.block-products-list__item-icon_02 {
+
+        svg {
+            margin-right: 4px;
+            margin-top: 6px;
+            width: 20px;
+        }
+    }
+
+    &.block-products-list__item-icon_03 {
+
+        svg {
+            margin-right: 2px;
+            margin-top: 4px;
+        }
+    }
+}
+
+.block-products-list__item-headline {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    max-width: 210px;
+}
+
+.block-products-list__item-img {
+    display: block;
+}
+
+.block-products-list__item-text {
+    font-size: 13px;
+    line-height: 24px;
+    padding: 36px 28px;
+    width: 50%;
+}
