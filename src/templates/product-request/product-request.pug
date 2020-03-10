@@ -1,0 +1,12 @@
+.product-request__wrapper
+    form.product-request.container(action="")
+        label.input-usual.input-usual_name(for="")
+            input(type="text", name="name" placeholder="Имя *" required)
+        label.input-usual.input-usual_phone(for="")
+            input(type="tel", name="phone" placeholder="Телефон *" required)
+        label.input-usual.input-usual_mail(for="")
+            input(type="email", name="mail" placeholder="E-mail *" required)
+        label.input-usual.input-usual_product(for="")
+            input(type="text", name="product" placeholder="Наименование товара")
+        textarea.input-comment(name="notation", cols="30", rows="10" placeholder="Примечание")
+        input.input-submit(type="submit", value="Отправить запрос на товар")

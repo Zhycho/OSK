@@ -493,6 +493,115 @@
   border-color: #007bad;
 }
 
+.product-request__wrapper {
+  background-color: #007bad;
+  padding: 24px 0 60px;
+}
+.product-request {
+  display: grid;
+  gap: 24px 28px;
+  grid-template-areas: "name phone mail" "comment comment product" "comment comment submit";
+}
+.product-request .input-usual_name {
+  grid-area: name;
+}
+.product-request .input-usual_phone {
+  grid-area: phone;
+}
+.product-request .input-usual_mail {
+  grid-area: mail;
+}
+.product-request .input-usual_product {
+  grid-area: product;
+}
+.product-request .input-comment {
+  grid-area: comment;
+}
+.product-request .input-submit {
+  grid-area: submit;
+}
+.input-usual input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #FFF;
+  font-size: 14px;
+  height: 32px;
+  padding: 0 4px;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+.input-usual input::-webkit-input-placeholder {
+  color: #FFF;
+  opacity: 0.8;
+}
+.input-usual input::-moz-placeholder {
+  color: #FFF;
+  opacity: 0.8;
+}
+.input-usual input:-ms-input-placeholder {
+  color: #FFF;
+  opacity: 0.8;
+}
+.input-usual input::-ms-input-placeholder {
+  color: #FFF;
+  opacity: 0.8;
+}
+.input-usual input::placeholder {
+  color: #FFF;
+  opacity: 0.8;
+}
+.input-usual input:hover,
+.input-usual input:focus {
+  border-color: #0ea4e1;
+}
+.input-comment {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #FFF;
+  font-size: 14px;
+  height: 126px;
+  padding: 16px;
+  resize: none;
+  transition: all 0.2s ease-in-out;
+}
+.input-comment::-webkit-input-placeholder {
+  color: #FFF;
+  opacity: 0.8;
+}
+.input-comment::-moz-placeholder {
+  color: #FFF;
+  opacity: 0.8;
+}
+.input-comment:-ms-input-placeholder {
+  color: #FFF;
+  opacity: 0.8;
+}
+.input-comment::-ms-input-placeholder {
+  color: #FFF;
+  opacity: 0.8;
+}
+.input-comment::placeholder {
+  color: #FFF;
+  opacity: 0.8;
+}
+.input-comment:hover,
+.input-comment:focus {
+  border-color: #0ea4e1;
+}
+.input-submit {
+  background-color: #FFF;
+  border: 1px solid #FFF;
+  color: #191919;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.input-submit:hover,
+.input-submit:focus {
+  background-color: #007bad;
+  color: #FFF;
+}
+
 @font-face {
   font-family: "MSC";
   src: url("../fonts/MuseoSansCyrl__thin.otf") format("opentype");

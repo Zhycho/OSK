@@ -1,0 +1,94 @@
+.product-request__wrapper {
+    background-color: #007bad;
+    padding: 24px 0 60px;
+}
+
+.product-request {
+    display: grid;
+    gap: 24px 28px;
+    grid-template-areas: 
+    "name phone mail"
+    "comment comment product"
+    "comment comment submit";
+
+    .input-usual_name {
+        grid-area: name;
+    }
+
+    .input-usual_phone {
+        grid-area: phone;
+    }
+
+    .input-usual_mail {
+        grid-area: mail;
+    }
+
+    .input-usual_product {
+        grid-area: product;
+    }
+
+    .input-comment {
+        grid-area: comment;
+    }
+
+    .input-submit {
+        grid-area: submit;
+    }
+}
+
+.input-usual {
+
+    input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        color: #FFF;
+        font-size: 14px;
+        height: 32px;
+        padding: 0 4px;
+        transition: all .2s ease-in-out;
+        width: 100%;
+
+        &::placeholder {
+            color: #FFF;
+            opacity: 0.8;
+        }
+
+        &:hover, &:focus {
+            border-color: #0ea4e1;
+        }
+    }
+}
+
+.input-comment {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #FFF;
+    font-size: 14px;
+    height: 126px;
+    padding: 16px;
+    resize: none;
+    transition: all .2s ease-in-out;
+
+    &::placeholder {
+        color: #FFF;
+        opacity: 0.8;
+    }
+
+    &:hover, &:focus {
+        border-color: #0ea4e1;
+    }
+}
+
+.input-submit {
+    background-color: #FFF;
+    border: 1px solid #FFF;
+    color: #191919;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &:hover, &:focus {
+        background-color: #007bad;
+        color: #FFF;
+    }
+}
