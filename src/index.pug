@@ -3,8 +3,10 @@ html(lang="ru")
     head
         include ./templates/head/head.pug
     body
-        header
-            include ./templates/header/header.pug
+        header.header_index
+            include ./templates/header/header_index.pug
         main
+            include ./templates/main-slider/main-slider.pug
+            include ./templates/block-about/block-about.pug
         footer
             include ./templates/footer/footer.pug

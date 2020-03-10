@@ -1,0 +1,147 @@
+.main-slider__wrapper {
+    position: relative;
+
+    .slick-dots {
+        bottom: 114px;
+        right: calc(50% - 555px);
+        width: auto;
+    }
+
+    .slick-dots li {
+        height: 12px;
+        margin: 0 3px;
+        width: 12px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    .slick-dots li button {
+        background: #FFF;
+        color: #FFF;
+        height: 12px;
+        transition: all 0.2s ease-in-out;
+        width: 12px;
+    }
+
+    .slick-dots li button::before {
+        height: 12px;
+        width: 12px;
+    }
+
+    .slick-dots li button:hover {
+        background: #007bad;
+        color: #007bad;
+    }
+
+    .slick-dots li.slick-active button {
+        background: #007bad;
+        color: #007bad;
+    }
+}
+
+.main-slider__item {
+    overflow: hidden;
+    position: relative;
+}
+
+.slick-slide.main-slider__item {
+    height: 100vh;
+}
+
+.main-slider__item-content {
+    left: calc(50% - 555px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.main-slider__item-headline {
+    color: #FFF;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 42px;
+    margin-bottom: 48px;
+
+    span {
+        color: #0ea4e1;
+        display: block;
+        font-size: 62px;
+        font-weight: 700;
+    }
+}
+
+.main-slider__item-img {
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    img {
+        height: 100vh;
+        object-fit: cover;
+        width: 100vw;
+    }
+}
+
+.main-slider__nav {
+    display: flex;
+    height: 0;
+    justify-content: flex-end;
+    position: relative;
+    top: -100px;
+}
+
+.main-slider__nav-item {
+    border: 1px solid #b5b6b8;
+    cursor: pointer;
+    height: 45px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    width: 45px;
+
+    &.main-slider__nav-item_prev {
+        margin-right: 11px;
+
+        &::before {
+            background-color: transparent;
+            border-right: 2px solid #FFF;
+            border-top: 2px solid #FFF;
+            content: "";
+            display: block;
+            height: 9px;
+            position: absolute;
+            right: 14px;
+            transform: rotate(-135deg);
+            transition: all 0.2s ease-in-out;
+            top: 16px;
+            width: 9px;
+        }
+    }
+
+    &.main-slider__nav-item_next {
+
+        &::before {
+            background-color: transparent;
+            border-right: 2px solid #FFF;
+            border-top: 2px solid #FFF;
+            content: "";
+            display: block;
+            height: 9px;
+            position: absolute;
+            right: 18px;
+            transform: rotate(45deg);
+            transition: all 0.2s ease-in-out;
+            top: 16px;
+            width: 9px;
+        }
+    }
+
+    &:hover {
+        background-color: #007bad;
+        border-color: #007bad;
+    }
+}

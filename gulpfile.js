@@ -24,7 +24,7 @@ const path = {
     src: {
         // html: 'src/*.html',
         html: 'src/*.pug',
-        js: 'src/js/script.js',
+        js: 'src/js/common.js',
         style: 'src/style/main.less',
         styleAll: 'src/**/*.less',
         img: ['src/img/**/*.jpg', 'src/img/**/*.png'],
@@ -34,7 +34,7 @@ const path = {
         // html: 'src/*.html',
         html: 'src/*.pug',
         htmlAll: 'src/**/*.pug',
-        js: 'src/js/script.js',
+        js: 'src/js/common.js',
         style: 'src/style/**/*.less',
         styleAll: 'src/**/*.less',
         img: 'src/img/**/*.*',
