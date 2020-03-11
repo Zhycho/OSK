@@ -1,6 +1,10 @@
 .product-request__wrapper {
     background-color: #007bad;
     padding: 24px 0 60px;
+
+    @media (max-width: 768px) {
+        padding: 24px 0 40px;
+    }
 }
 
 .product-request {
@@ -33,6 +37,24 @@
 
     .input-submit {
         grid-area: submit;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-areas: 
+        "name phone"
+        "mail product"
+        "comment comment"
+        "submit submit";
+    }
+
+    @media (max-width:  480px) {
+        grid-template-areas: 
+        "name"
+        "phone"
+        "mail"
+        "product"
+        "comment"
+        "submit";
     }
 }
 
@@ -75,7 +97,7 @@
         opacity: 0.8;
     }
 
-    &:hover, &:focus {
+    &:focus {
         border-color: #0ea4e1;
     }
 }
@@ -90,5 +112,9 @@
     &:hover, &:focus {
         background-color: #007bad;
         color: #FFF;
+    }
+
+    @media (max-width: 768px) {
+        height: 44px;
     }
 }

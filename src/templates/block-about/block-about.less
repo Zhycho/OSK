@@ -4,7 +4,7 @@
     grid-template-columns: 1fr 1fr;
 
     img {
-        display: inline-block;
+        display: block;
         max-width: 100%;
     }
 
@@ -16,5 +16,19 @@
 
     .main-headline {
         margin-bottom: 52px;
+    }
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .main-headline {
+            margin-bottom: 40px;
+        }
     }
 }

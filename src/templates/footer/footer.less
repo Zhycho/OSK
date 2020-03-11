@@ -1,0 +1,241 @@
+.footer-top {
+    background-color: #24313f;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer-contacts {
+    color: #FFF;
+    padding: 80px 15px;
+    justify-self: end;
+    max-width: 590px;
+    width: 100%;
+
+    .main-headline {
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: 992px) {
+        max-width: none;
+    }
+
+    @media (max-width: 768px) {
+        padding: 40px 15px;
+
+        .main-headline {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.footer-address {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+
+    & > ul > li {
+        align-items: center;
+        display: flex;
+        margin-bottom: 16px;
+    }
+
+    & > ul > li > a {
+        color: #FFF;
+        margin-left: 8px;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            color: #007bad;
+        }
+    }
+
+    @media (max-width: 480px) {
+        font-size: 16px;
+    }
+}
+
+.soc-list {
+    display: flex;
+    margin-left: 8px;
+
+    li {
+        margin-right: 8px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    a {
+        align-items: center;
+        display: flex;
+        fill: #FFF;
+        height: 24px;
+        justify-content: center;
+        transition: all .2s ease-in-out;
+        width: 24px;
+
+        &:hover {
+            fill: #007bad;
+        }
+    }
+}
+
+.footer-map {
+
+    iframe {
+        display: block;
+        height: 100%;
+    }
+
+    @media (max-width: 992px) {
+        padding: 0 15px 24px;
+
+        iframe {
+            height: 400px;
+        }
+    }
+
+    @media (max-width: 576px) {
+
+        iframe {
+            height: 320px;
+        }
+    }
+}
+
+.footer-bottom {
+    background-color: #17171a;
+}
+
+.footer-bottom__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    &.container {
+        padding: 30px 15px;
+    }
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "ft-1 ft-2 ft-4"
+        "ft-1 ft-3 ft-4";
+    }
+
+    @media (max-width: 576px) {
+        gap: 12px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "ft-2 ft-3"
+        "ft-1 ft-4";
+    }
+}
+
+.footer-bottom__list-item {
+    position: relative;
+    width: 100%;
+
+    &:nth-of-type(1) {
+        grid-area: ft-1;
+    }
+
+    &:nth-of-type(2) {
+        grid-area: ft-2;
+    }
+    
+    &:nth-of-type(3) {
+        grid-area: ft-3;
+    }
+
+    &:nth-of-type(4) {
+        grid-area: ft-4;
+    }
+
+    &:nth-of-type(2), &:nth-of-type(3) {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    &:last-of-type {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &::after {
+        background-color: #6d6d6e;
+        content: "";
+        display: block;
+        height: 51px;
+        position: absolute;
+        right: 0;
+        top: 4px;
+        transform: rotate(45deg);
+        width: 1px;
+    }
+
+    &:last-of-type::after {
+        display: none;
+    }
+
+    @media (max-width: 992px) {
+        &::after {
+            display: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        &:nth-of-type(2) {
+            justify-content: flex-start;
+        }
+
+        &:nth-of-type(3) {
+            justify-content: flex-end;
+            text-align: end;
+        }
+    }
+}
+
+.footer-logo {
+
+    img {
+        display: block;
+        padding-bottom: 8px;
+    }
+
+    span {
+        color: #FFF;
+        font-size: 12px;
+    }
+}
+
+.footer-link {
+    color: #FFF;
+    font-size: 12px;
+    padding: 4px 0;
+    transition: all .2s ease-in-out;
+    white-space: nowrap;
+
+    &:hover {
+        color: #007bad;
+    }
+
+    @media (max-width: 576px) {
+        white-space: normal;
+    }
+}
+
+.footer-praweb {
+    fill: #FFF;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        fill: #007bad;
+    }
+}
