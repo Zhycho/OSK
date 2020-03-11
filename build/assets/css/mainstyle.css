@@ -923,6 +923,10 @@
   border-color: #007bad;
 }
 
+#mobile-burger-menu {
+  z-index: 1000;
+}
+
 .block-partners .main-headline {
   margin-bottom: 60px;
 }
@@ -1091,6 +1095,7 @@
 }
 .input-comment:focus {
   border-color: #0ea4e1;
+  outline: none;
 }
 .input-submit {
   background-color: #FFF;
