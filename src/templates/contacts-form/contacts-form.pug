@@ -1,11 +1,18 @@
 div
     form.contacts-form(action="")
         h2.contacts-form__headline Напишите нам и наш менеджер свяжется с вами в ближайшее время
-        label.input-usual.input-usual_name(for="")
+        label.input-usual(for="")
             input(type="text", name="name" placeholder="Имя *" required)
-        label.input-usual.input-usual_phone(for="")
+        label.input-usual(for="")
             input(type="tel", name="phone" placeholder="Телефон *" required)
-        label.input-usual.input-usual_mail(for="")
+        label.input-usual(for="")
             input(type="email", name="mail" placeholder="E-mail *" required)
+        label.input-file(for="file")
+            input(type="file", name="file" id="file")
+            span Прикрепить файл
+            include ../_common/svg/download.svg
         textarea.input-comment(name="notation", cols="30", rows="10" placeholder="Сообщение")
+        label.input-checkbox(for="policy-of-conf")
+            input(type="checkbox", name="policy-of-conf" id="policy-of-conf")
+            span Я согласен с политикой конфиденциальности и принимаю пользовательское соглашение
         input.input-submit(type="submit", value="Отправить")

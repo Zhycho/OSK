@@ -29,6 +29,49 @@
   }
 }
 
+.block-gallery {
+  display: grid;
+  gap: 4px;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 40px;
+}
+@media (max-width: 992px) {
+  .block-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .block-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+.block-gallery__item {
+  cursor: pointer;
+  position: relative;
+}
+.block-gallery__item img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.block-gallery__item a {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.block-gallery__item:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
 .block-products .main-headline {
   margin-bottom: 60px;
 }
@@ -154,33 +197,6 @@
   .block-products-list__item-text {
     padding: 28px 16px;
   }
-}
-
-.contacts-form {
-  background-color: #007bad;
-  padding: 36px 16px 20px;
-}
-.contacts-form .input-comment {
-  display: block;
-  width: 100%;
-}
-.contacts-form .input-usual input {
-  margin-bottom: 12px;
-}
-.contacts-form .input-submit {
-  color: #3f4144;
-  font-size: 18px;
-  height: 58px;
-  line-height: 24px;
-  width: 100%;
-}
-.contacts-form__headline {
-  color: #FFF;
-  font-size: 24px;
-  font-weight: 900;
-  margin: 0 auto 8px;
-  max-width: 450px;
-  text-align: center;
 }
 
 .block-why-are-we {
@@ -328,6 +344,132 @@
   }
 }
 
+.contacts-form {
+  background-color: #007bad;
+  padding: 36px 16px 20px;
+  position: relative;
+}
+.contacts-form .input-comment {
+  display: block;
+  margin-bottom: 24px;
+  width: 100%;
+}
+.contacts-form .input-file {
+  margin-bottom: 40px;
+}
+.contacts-form .input-usual input {
+  margin-bottom: 13px;
+}
+.contacts-form .input-submit {
+  color: #3f4144;
+  font-size: 18px;
+  height: 58px;
+  line-height: 24px;
+  width: 100%;
+}
+.contacts-form::after {
+  border-bottom: 27px solid transparent;
+  border-top: 0px solid #007bad;
+  border-right: 35px solid #007bad;
+  border-left: 0px solid transparent;
+  content: "";
+  position: absolute;
+  right: 20%;
+  transform: rotate(285deg);
+  top: 100%;
+}
+@media (max-width: 576px) {
+  .contacts-form {
+    padding: 20px 16px;
+  }
+}
+.contacts-form__headline {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0 auto 8px;
+  max-width: 450px;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .contacts-form__headline {
+    font-size: 20px;
+  }
+}
+.input-file {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 14px;
+  fill: #FFF;
+  height: 32px;
+  justify-content: space-between;
+  padding: 0 16px 0 4px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+.input-file input {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+.input-file:hover,
+.input-file:focus {
+  border-color: #0ea4e1;
+  color: #0ea4e1;
+  fill: #0ea4e1;
+}
+.input-checkbox {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 28px;
+  padding-left: 24px;
+  position: relative;
+  width: 100%;
+}
+.input-checkbox input {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+.input-checkbox span {
+  color: #FFF;
+  font-size: 13px;
+  line-height: 24px;
+  position: relative;
+}
+.input-checkbox span::before {
+  background-color: transparent;
+  border-bottom: 2px solid #FFF;
+  border-radius: 2px;
+  border-right: 2px solid #FFF;
+  content: "";
+  height: 11px;
+  left: -20px;
+  opacity: 0.7;
+  position: absolute;
+  transform: rotate(45deg);
+  transition: all 0.2s ease-in-out;
+  top: 0;
+  width: 6px;
+}
+.input-checkbox input:checked + span::before {
+  border-color: #0ea4e1;
+  opacity: 1;
+}
+.input-checkbox:hover input + span::before {
+  border-color: #0ea4e1;
+  opacity: 1;
+}
+
 .contacts-info {
   background-color: #f1f1f1;
 }
@@ -338,6 +480,17 @@
 }
 .contacts-info__header div:nth-of-type(2) {
   text-align: end;
+}
+@media (max-width: 480px) {
+  .contacts-info__header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px;
+  }
+  .contacts-info__header div:nth-of-type(2) {
+    margin-top: 20px;
+    text-align: left;
+  }
 }
 .contacts-info__header-name {
   color: #3f4144;
@@ -372,10 +525,21 @@ a.contacts-info__header-line:hover {
   display: block;
   height: 51px;
   position: absolute;
-  right: 42%;
+  right: 40%;
   top: 42%;
   transform: rotate(45deg) translateY(-50%);
   width: 1px;
+}
+@media (max-width: 576px) {
+  .contacts-info__schedule::after {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .contacts-info__schedule {
+    flex-direction: column;
+    padding: 16px;
+  }
 }
 .contacts-info__schedule-weekdays {
   font-size: 13px;
@@ -383,6 +547,11 @@ a.contacts-info__header-line:hover {
 .contacts-info__schedule-weekdays span {
   font-weight: 900;
   text-transform: uppercase;
+}
+@media (max-width: 480px) {
+  .contacts-info__schedule-weekdays {
+    margin-bottom: 12px;
+  }
 }
 .contacts-info__schedule-weekends {
   font-size: 13px;
@@ -401,6 +570,11 @@ a.contacts-info__header-line:hover {
 .contacts-info__list li:last-of-type {
   margin-bottom: 0;
 }
+@media (max-width: 480px) {
+  .contacts-info__list {
+    padding: 16px;
+  }
+}
 .contacts-info__list-category {
   color: #3f4144;
   font-size: 13px;
@@ -409,11 +583,21 @@ a.contacts-info__header-line:hover {
   padding-right: 12px;
   width: 45%;
 }
+@media (max-width: 480px) {
+  .contacts-info__list-category {
+    word-break: break-word;
+  }
+}
 .contacts-info__list-value {
   color: #3f4144;
   font-size: 13px;
   line-height: 24px;
   width: 55%;
+}
+@media (max-width: 480px) {
+  .contacts-info__list-value {
+    word-break: break-word;
+  }
 }
 .contact-info__download {
   align-items: flex-end;
@@ -1726,6 +1910,11 @@ input:focus {
   gap: 12px;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 40px;
+}
+@media (max-width: 992px) {
+  .contacts-page {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Slider */
