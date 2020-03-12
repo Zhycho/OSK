@@ -1,0 +1,123 @@
+.product-nav__headline {
+    background-color: #3f4144;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 13px;
+    text-align: center;
+}
+
+.product-board-link-list__item.product-board-link-list__gray {
+    border: 1px solid #bababa;
+
+    .product-board-link-list__item-plus, .product-board-link-list__item-icon {
+        fill: #3f4144;
+    }
+
+    .product-board-link-list__item-text {
+        color: #3f4144;
+    }
+
+    &:hover {
+        background-color: #3f4144;
+        border-color: #3f4144;
+
+        .product-board-link-list__item-plus, .product-board-link-list__item-icon  {
+            fill: #FFF;
+        }
+
+        .product-board-link-list__item-text {
+            color: #FFF;
+        }
+    }
+
+    &.active {
+        background-color: #3f4144;
+        border-color: #3f4144;
+
+        .product-board-link-list__item-plus, .product-board-link-list__item-icon  {
+            fill: #FFF;
+        }
+
+        .product-board-link-list__item-text {
+            color: #FFF;
+        }
+    }
+}
+
+.product-board-link-list.product-board-link-list__product-nav {
+
+    .product-board-link-list__item {
+        margin-bottom: 13px;
+        padding: 16px 4px 16px 12px;
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -6px;
+
+        .product-board-link-list__item {
+            margin: 0 6px 12px;
+        }
+    }
+}
+
+.request-button {
+    align-items: center;
+    background-color: #007bad;
+    border: 1px solid #007bad;
+    display: flex;
+    flex-direction: column;
+    fill: #FFF;
+    height: 140px;
+    justify-content: center;
+    transition: all .2s ease-in-out;
+    width: 140px;
+
+    svg {
+        margin-bottom: 8px;
+    }
+
+    span {
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        transition: all .2s ease-in-out;
+    }
+
+    &:hover {
+        background-color: #FFF;
+        fill: #007bad;
+
+        span {
+            color: #007bad;
+        }
+    }
+
+    @media (max-width: 768px) {
+        bottom: 0;
+        flex-direction: row;
+        height: 48px;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+
+        svg {
+            margin-bottom: 0;
+            margin-right: 8px;
+        }
+    }
+}
+
+.footer_product {
+
+    @media (max-width: 768px) {
+        margin-bottom: 48px;
+    }
+}
