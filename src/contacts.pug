@@ -1,0 +1,17 @@
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .container
+                h1.page-headline.page-headline_without-wrapper Контакты
+                .contacts-page
+                    include ./templates/contacts-info/contacts-info.pug
+                    include ./templates/contacts-form/contacts-form.pug
+
+            include ./templates/mobile-menu/mobile-menu.pug
+        footer.footer_product
+            include ./templates/footer/footer.pug

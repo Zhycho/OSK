@@ -233,6 +233,10 @@ input:focus {
     @media (max-width: 480px) {
         font-size: 32px;
     }
+
+    &.page-headline_without-wrapper {
+        margin: 28px 0;
+    }
 }
 
 // product-page 
@@ -241,6 +245,7 @@ input:focus {
     display: grid;
     gap: 40px;
     grid-template-columns: 140px 1fr;
+    margin-bottom: 40px;
     padding: 40px 0;
 
     @media (max-width: 768px) {
@@ -276,3 +281,13 @@ input:focus {
         grid-area: pg-m;
     }
 }
+
+// contacts-page
+
+.contacts-page {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 40px;
+}
+

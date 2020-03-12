@@ -1,0 +1,140 @@
+.contacts-info {
+    background-color: #f1f1f1;
+}
+
+.contacts-info__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+
+    div:nth-of-type(2) {
+        text-align: end;
+    }
+}
+
+.contacts-info__header-name {
+    color: #3f4144;
+    display: block;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.contacts-info__header-line {
+    color: #3f4144;
+    display: block;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+a.contacts-info__header-line {
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        color: #007bad;
+    }
+}
+
+.contacts-info__schedule {
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    position: relative;
+
+    &::after {
+        background-color: #3f4144;
+        content: "";
+        display: block;
+        height: 51px;
+        position: absolute;
+        right: 42%;
+        top: 42%;
+        transform: rotate(45deg) translateY(-50%);
+        width: 1px;
+    }
+}
+
+.contacts-info__schedule-weekdays {
+    font-size: 13px;
+
+    span {
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+}
+
+.contacts-info__schedule-weekends {
+    font-size: 13px;
+    text-transform: uppercase;
+
+    span {
+        font-weight: 900;
+    }
+}
+
+.contacts-info__list {
+    padding: 32px;
+
+    li {
+        display: flex;
+        margin-bottom: 24px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.contacts-info__list-category {
+    color: #3f4144;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 24px;
+    padding-right: 12px;
+    width: 45%;
+}
+
+.contacts-info__list-value {
+    color: #3f4144;
+    font-size: 13px;
+    line-height: 24px;
+    width: 55%;
+}
+
+.contact-info__download {
+    align-items: flex-end;
+    background-color: #007bad;
+    color: #FFF;
+    display: flex;
+    fill: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    height: 68px;
+    justify-content: flex-start;
+    padding: 10px;
+    position: relative;
+    transition: all .2s ease-in-out;
+    width: 186px;
+
+    span {
+        margin: 0 0 2px 8px;
+    }
+
+    &::after {
+        border-bottom: 20px solid transparent;
+        border-right: 55px solid #f1f1f1;
+        border-left: 133px solid transparent;
+        border-top: 48px solid #f1f1f1;
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &:hover {
+        background-color: #0ea4e1;
+    }
+}
