@@ -61,6 +61,25 @@ $(document).ready(function () {
         ]
     });
 
+    // Слайдер партнёров на главной
+    $('.js--block-news-slider ').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: false,
+        swipe: false,
+        prevArrow: $('.js--block-news-slider__arrow_prev'),
+        nextArrow: $('.js--block-news-slider__arrow_next'),
+        responsive: [
+            {
+                breakpoint: 993,
+                settings: {
+                    swipe: true,
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
     // MMenu
     let $menu = $("#mobile-burger-menu").mmenu({
         "navbars": [

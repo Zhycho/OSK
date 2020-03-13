@@ -1,8 +1,41 @@
 .block-why-are-we {
     background-image: url(../img/why-are-we-back.png);
+    position: relative;
 
     .main-headline {
         margin-bottom: 28px;
+    }
+
+    &::after {
+        background-image: url(../img/why-are-we-dec__after.png);
+        background-repeat: no-repeat;
+        content: "";
+        display: block;
+        height: 500px;
+        position: absolute;
+        right: 0;
+        top: -70px;
+        width: 270px;
+        user-select: none;
+    }
+
+    &::before {
+        background-image: url(../img/why-are-we-dec__before.png);
+        background-repeat: no-repeat;
+        bottom: -90px;
+        content: "";
+        display: block;
+        height: 520px;
+        position: absolute;
+        left: 0;
+        width: 300px;
+        user-select: none;
+    }
+
+    @media (max-width: 1650px) {
+        &::after, &::before {
+            display: none;
+        }
     }
 }
 

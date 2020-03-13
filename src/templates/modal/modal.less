@@ -1,0 +1,66 @@
+.modal {
+    display: none;
+
+    form {
+        position: relative;
+
+        // &::before {
+        //     background-image: url(../img/form-dec__before.png);
+        //     background-repeat: no-repeat;
+        //     content: "";
+        //     display: block;
+        //     height: 300px;
+        //     position: absolute;
+        //     width: 260px;
+        //     right: 20px;
+        // }
+    }
+}
+
+.fancybox-content.modal {
+    background-color: #007bad;
+    padding: 64px 64px 80px;
+
+    .input-usual {
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    .input-submit {
+        display: block;
+        height: 42px;
+        margin: 40px auto 0;
+        width: 265px;
+    }
+
+    .fancybox-close-small {
+        color: #FFF;
+        opacity: 1;
+        transition: all .2s ease-in-out;
+
+        svg {
+            height: 120%;
+            width: 120%;
+        }
+
+        &:hover {
+            color: #0ea4e1;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 24px;
+    }
+}
+
+.modal-headline {
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
+}

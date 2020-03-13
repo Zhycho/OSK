@@ -10,7 +10,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="assets/js/jquery.mmenu.all.min.js"></script>
 		<script src="assets/js/slick.min.js"></script>
-		<script src="assets/js/common.js"></script>
+		<script src="assets/js/common.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 	</head>
 	<body>
 		<header>
@@ -48,11 +49,11 @@
 			<div class="container">
 				<h1 class="page-headline page-headline_without-wrapper">Галерея</h1>
 				<ul class="block-gallery"> 
-					<li class="block-gallery__item"><img src="assets/img/gallery_01.png" alt=""><a href="javascript:;"></a></li>
-					<li class="block-gallery__item"><img src="assets/img/gallery_02.png" alt=""><a href="javascript:;"></a></li>
-					<li class="block-gallery__item"><img src="assets/img/gallery_03.png" alt=""><a href="javascript:;"></a></li>
-					<li class="block-gallery__item"><img src="assets/img/gallery_04.png" alt=""><a href="javascript:;"></a></li>
-					<li class="block-gallery__item"><img src="assets/img/gallery_05.png" alt=""><a href="javascript:;"></a></li>
+					<li class="block-gallery__item"><img src="assets/img/gallery_01.png" alt=""><a data-fancybox="gallery" href="assets/img/gallery_01.png"></a></li>
+					<li class="block-gallery__item"><img src="assets/img/gallery_02.png" alt=""><a data-fancybox="gallery" href="assets/img/gallery_02.png"></a></li>
+					<li class="block-gallery__item"><img src="assets/img/gallery_03.png" alt=""><a data-fancybox="gallery" href="assets/img/gallery_03.png"></a></li>
+					<li class="block-gallery__item"><img src="assets/img/gallery_04.png" alt=""><a data-fancybox="gallery" href="assets/img/gallery_04.png"></a></li>
+					<li class="block-gallery__item"><img src="assets/img/gallery_05.png" alt=""><a data-fancybox="gallery" href="assets/img/gallery_05.png"></a></li>
 				</ul>
 			</div>
 			<nav id="mobile-burger-menu">
@@ -74,7 +75,7 @@
 		<footer>
 			<div class="footer-top">
 				<div class="footer-contacts">
-					<h2 class="main-headline main-headline_white">Контакты<span>06</span></h2>
+					<h2 class="main-headline main-headline_white">Контакты</h2>
 					<address class="footer-address">
 						<ul>
 							<li>Телефоны: <a href="tel:+73422357880">+7 (342) 235-78-80</a></li>

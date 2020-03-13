@@ -54,7 +54,40 @@
 
     @media (max-width: 768px) {
         display: none;
-    } 
+    }
+
+    &::after {
+        background-image: url(../img/main-slider-dec__after.png);
+        background-repeat: no-repeat;
+        content: "";
+        display: block;
+        height: 400px;
+        position: absolute;
+        right: 0;
+        top: 130px;
+        width: 230px;
+        user-select: none;
+    }
+
+    &::before {
+        background-image: url(../img/main-slider-dec__before.png);
+        background-repeat: no-repeat;
+        bottom: -200px;
+        content: "";
+        display: block;
+        height: 470px;
+        left: 0;
+        position: absolute;
+        width: 280px;
+        user-select: none;
+        z-index: 1;
+    }
+
+    @media (max-width: 1650px) {
+        &::after, &::before {
+            display: none;
+        }
+    }
 }
 
 .main-slider__item {
